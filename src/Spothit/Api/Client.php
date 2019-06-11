@@ -194,9 +194,8 @@ class Client
         if ($responseArray['resultat'] != 1) {
             throw new ResponseCodeException(sprintf(
                 'Server returned "%s" error code.',
-                $result['erreurs']
-            ), $result['erreurs']);
-
+                $responseArray['erreurs']
+            ), $responseArray['erreurs']);
         }
 
         return $responseArray;
