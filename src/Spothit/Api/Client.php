@@ -11,7 +11,7 @@ use Spothit\Api\Exception\ResponseCodeException;
  */
 class Client
 {
-    const BASE_URL = 'https://www.spot-hit.fr';
+    const BASE_URL = 'http://www.spot-hit.fr';
 
     const SMS_TYPE_LOWCOST = 'lowcost';
     const SMS_TYPE_PREMIUM = 'premium';
@@ -193,12 +193,12 @@ class Client
         // If 'resultat' == 1, the message was send properly
         if ($responseArray['resultat'] != 1) {
             throw new ResponseCodeException(sprintf(
-                'Server returned "%s" error code. See error code list on http://www.octopush.com/en/errors_list.',
+                'Server returned "%s" error code.',
                 $result['erreurs']
             ), $result['erreurs']);
 
         }
 
-        return $result;
+        return $responseArray;
     }
 }
