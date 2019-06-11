@@ -1,0 +1,21 @@
+{
+    "name": "partikule/spothit-sms-api",
+    "description": "Spothit Library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michel-Ange Kuntz",
+            "email": "contact@partikule.net"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Spothit\\Api\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*"
+    }
+}
