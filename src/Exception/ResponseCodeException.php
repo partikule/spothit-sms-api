@@ -1,6 +1,6 @@
 <?php
 
-namespace Partikule\Spothit\Sms\Api\Exception;
+namespace Partikule\Spothit\Exception;
 
 class ResponseCodeException extends \RuntimeException
 {
