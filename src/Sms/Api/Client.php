@@ -1,10 +1,10 @@
 <?php
 
-namespace Spothit\Api;
+namespace Partikule\Spothit\Sms\Api;
 
-use Spothit\Api\Exception\RequestException;
-use Spothit\Api\Exception\ResponseException;
-use Spothit\Api\Exception\ResponseCodeException;
+use Partikule\Spothit\Sms\Api\Exception\RequestException;
+use Partikule\Spothit\Sms\Api\Exception\ResponseException;
+use Partikule\Spothit\Sms\Api\Exception\ResponseCodeException;
 
 /**
  * Spothit API client.
