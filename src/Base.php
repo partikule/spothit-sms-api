@@ -10,20 +10,12 @@ class Base {
 
     const BASE_URL = 'https://www.spot-hit.fr';
 
-    const SMS_TYPE_LOWCOST = 'lowcost';
-    const SMS_TYPE_PREMIUM = 'premium';
-
     /**
      * API key available on your manager.
      *
      * @var string
      */
     public $apiKey;
-
-    /**
-     * @var string self::SMS_TYPE_*
-     */
-    public $smsType = self::SMS_TYPE_LOWCOST;
 
     /**
      * Numbers in international format + XXZZZZZ.
@@ -42,7 +34,14 @@ class Base {
      *
      * @var string
      */
-    public $smsSender = 'OneSender';
+    public $smsSender = 'Spot-Hit';
+
+    /**
+     * Campaign identifier used for Spot-Hit administration panel and not visible to the recipients.
+     *
+     * @var string
+     */
+    public $campaignName = null;
 
     /**
      * Allow long SMS
@@ -65,11 +64,6 @@ class Base {
         $this->sendingTime = new \DateTime();
     }
 
-    public function setSmsType($smsType)
-    {
-        $this->smsType = $smsType;
-    }
-
     public function setSmsRecipients(array $smsRecipients)
     {
         $this->smsRecipients = $smsRecipients;
@@ -83,6 +77,11 @@ class Base {
     public function setSmsSender($smsSender)
     {
         $this->smsSender = $smsSender;
+    }
+
+    public function setCampaignName($campaignName)
+    {
+        $this->campaignName = $campaignName;
     }
 
     public function setCallbackUrl($url)
