@@ -10,8 +10,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "Spothit\\Api\\": "src/"
+        "psr-4": {
+            "Partikule\\Spothit\\": "src/"
         }
     },
     "require": {
